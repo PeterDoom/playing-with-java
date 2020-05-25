@@ -10,8 +10,6 @@ public class CompositionMain {
         Motherboard theMotherBoard = new Motherboard("SOMEMODEL-2", "Asus", 4, 6, "v2");
 
         PC pc = new PC(pcCase, monitor, theMotherBoard);
-        pc.getPcCase().pressPowerButton();
-        pc.getMonitor().drawPixelAt(1500, 1200 , "red");
-        pc.getMotherboard().loadProgram("windows XP");
+        pc.powerUp();
     }
 }
