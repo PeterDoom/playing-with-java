@@ -1,4 +1,4 @@
-package oop;
+package oop.classes;
 
 public class BankAccount {
     private String number;

@@ -1,4 +1,6 @@
-package oop;
+package oop.classes;
+
+import oop.classes.Car;
 
 public class Main {
     public static void main(String[] args) {

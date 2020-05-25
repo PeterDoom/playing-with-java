@@ -1,4 +1,6 @@
-package oop;
+package oop.classes;
+
+import oop.classes.BankAccount;
 
 public class BankAccountMain {
     public static void main(String[] args) {
