@@ -72,7 +72,7 @@ public class GroceryListMain {
         System.out.print("Enter number here: ");
         int itemNo = scanner.nextInt();
         scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo);
+        groceryList.removeGroceryItem(itemNo-1);
     }
 
     public static void searchForItem(){
