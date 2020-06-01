@@ -41,4 +41,9 @@ public class DeskPhone implements ITelephone {
     public boolean isRinging() {
         return isRinging;
     }
+
+    @Override
+    public void loadContact(String contact){
+        System.out.println("Loading contact: " + contact);
+    };
 }
