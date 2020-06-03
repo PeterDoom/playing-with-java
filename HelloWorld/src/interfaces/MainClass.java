@@ -7,7 +7,7 @@ public class MainClass {
         thisPhone.powerOn();
         thisPhone.callPhone(121212);
 
-        ITelephone mobilePhone = new MobilePhone(21212121);
+        MobilePhone mobilePhone = new MobilePhone(21212121);
         mobilePhone.powerOn();
         thisPhone.answer();
 
