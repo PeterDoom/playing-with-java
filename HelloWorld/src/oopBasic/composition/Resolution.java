@@ -1,4 +1,4 @@
-package oop.composition;
+package oopBasic.composition;
 
 public class Resolution {
     private int width;

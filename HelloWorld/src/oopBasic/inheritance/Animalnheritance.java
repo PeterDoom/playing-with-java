@@ -1,4 +1,4 @@
-package oop.inheritance;
+package oopBasic.inheritance;
 
 public class Animalnheritance {
  private String name;

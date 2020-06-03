@@ -1,4 +1,4 @@
-package oop.encapsulation;
+package oopBasic.encapsulation;
 
 public class PlayerEncapsulation {
     private String name;

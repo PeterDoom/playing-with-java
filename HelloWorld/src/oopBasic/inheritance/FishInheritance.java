@@ -1,4 +1,4 @@
-package oop.inheritance;
+package oopBasic.inheritance;
 
 public class FishInheritance extends Animalnheritance {
     private int gills;

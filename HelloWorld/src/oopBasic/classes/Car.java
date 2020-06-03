@@ -1,4 +1,4 @@
-package oop.classes;
+package oopBasic.classes;
 
 public class Car {
      private int doors;

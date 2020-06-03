@@ -1,4 +1,4 @@
-package oop.composition;
+package oopBasic.composition;
 
 public class Dimensions {
     private int width;

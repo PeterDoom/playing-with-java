@@ -1,4 +1,4 @@
-package oop.inheritance;
+package oopBasic.inheritance;
 
 public class DogInheritance extends Animalnheritance {
 
