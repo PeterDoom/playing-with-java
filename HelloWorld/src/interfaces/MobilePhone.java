@@ -1,17 +1,19 @@
 package interfaces;
 
-public class DeskPhone implements ITelephone {
+public class MobilePhone implements ITelephone {
 
     private int myNumber;
     private boolean isRinging;
+    private boolean isOn;
 
-    public DeskPhone(int myNumber) {
+    public MobilePhone(int myNumber) {
         this.myNumber = myNumber;
         this.isRinging = false;
     }
 
     @Override
     public void powerOn() {
+        boolean isOn = true;
         System.out.println("Powered on");
     }
 
@@ -23,12 +25,12 @@ public class DeskPhone implements ITelephone {
     @Override
     public void answer() {
         isRinging = false;
-        System.out.println("Answering the phone call");
+        System.out.println("Answering the mobile call");
     }
 
     @Override
     public boolean callPhone(int phoneNumber) {
-        if (phoneNumber == myNumber) {
+        if (phoneNumber == myNumber && isOn) {
             isRinging = true;
             System.out.println("Calling");
         } else {
