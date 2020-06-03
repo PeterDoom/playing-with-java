@@ -8,7 +8,8 @@ public class innerClassesMain {
         mcLaren.addGear(3,15.3);
         mcLaren.operateClutch(true);
         mcLaren.changeGears(1);
-        mcLaren.operateClutch(true);
+        mcLaren.operateClutch(false);
+        System.out.println(mcLaren.wheelSpeed(1000));
         mcLaren.changeGears(2);
     }
 }
