@@ -1,9 +1,8 @@
 package generics;
 
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
-public class Team<T> {
+public class Team<T extends Player> {
     private String name;
     int played = 0;
     int won = 0;
