@@ -26,7 +26,7 @@ public class Team<T> {
             return false;
         } else {
             members.add(player);
-            System.out.println(((Player)player).getName() + " picked for tema " + this.name);
+            System.out.println(((Player)player).getName() + " picked for team " + this.name);
             return true;
         }
     }
