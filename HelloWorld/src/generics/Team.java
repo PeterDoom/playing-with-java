@@ -21,11 +21,11 @@ public class Team<T extends Player> {
 
     public boolean addPlayer(T player) {
         if (members.contains(player)) {
-            System.out.println(((Player)player).getName() + " is already on the team");
+            System.out.println(player.getName() + " is already on the team");
             return false;
         } else {
             members.add(player);
-            System.out.println(((Player)player).getName() + " picked for team " + this.name);
+            System.out.println(player.getName() + " picked for team " + this.name);
             return true;
         }
     }
