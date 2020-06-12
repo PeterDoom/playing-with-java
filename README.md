@@ -1,3 +1,3 @@
 # playing-with-java
 
-Follow me on my adventure of learning Java, haha. 
+Follow me on my adventure of learning Java
