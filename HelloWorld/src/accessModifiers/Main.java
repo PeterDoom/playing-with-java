@@ -9,10 +9,10 @@ public class Main {
         timsAccount.withdraw(-200);
         timsAccount.deposit(-20);
         timsAccount.calculateBalance();
-        timsAccount.balance = 5000;
+        //timsAccount.balance = 5000;
 
         System.out.println("Balance on account is " + timsAccount.getBalance());
-        timsAccount.transactions.add(4500);
+        //timsAccount.transactions.add(4500);
         timsAccount.calculateBalance();
     }
 }
