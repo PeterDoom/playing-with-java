@@ -56,6 +56,7 @@ public class Theatre {
                 System.out.println("Seat " + seatNumber + " reserved");
                 return true;
             } else {
+                System.out.println("Already Reserved");
                 return false;
             }
         }
