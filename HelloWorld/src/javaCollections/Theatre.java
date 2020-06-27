@@ -6,6 +6,10 @@ public class Theatre {
     public final String theatreName;
     private List<Seat> seats = new ArrayList<>();
 
+    public List<Seat> getSeats() {
+        return seats;
+    }
+
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
         int lastRow = 'A' + (numRows - 1);
