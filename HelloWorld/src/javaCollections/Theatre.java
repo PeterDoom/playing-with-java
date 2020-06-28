@@ -16,7 +16,13 @@ public class Theatre {
 
         for (char row = 'A'; row <= lastRow; row++) {
             for (int seatNum = 1; seatNum <= seatsPerRow; seatNum++) {
-                Seat seat = new Seat(row + String.format("%02d", seatNum));
+                double price = 12.00;
+                if ((row < 'D') && (seatNum >=4 && seatNum <=9)){
+                    price = 14f;
+                }else if ((row > 'F') || (seatNum < 4 || seatNum > 9)) {
+                    price = 7f;
+                }
+                Seat seat = new Seat(row + String.format("%02d", seatNum), price);
                 seats.add(seat);
             }
         }
@@ -27,22 +33,24 @@ public class Theatre {
     }
 
     public boolean reserveSeat(String seatNumber) {
-        Seat requestSeat = new Seat(seatNumber);
-        int foundSeat = Collections.binarySearch(seats,requestSeat,null);
+        Seat requestSeat = new Seat(seatNumber, 0);
+        int foundSeat = Collections.binarySearch(seats, requestSeat, null);
         if (foundSeat >= 0) {
             return seats.get(foundSeat).reserve();
-        }else {
+        } else {
             System.out.println("There is no seat or seat number");
             return false;
         }
     }
 
-    public class Seat implements Comparable<Seat>{
+    public class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
+        private double price;
 
-        public Seat(String seatNumber) {
+        public Seat(String seatNumber, double price) {
             this.seatNumber = seatNumber;
+            this.price = price;
         }
 
         @Override
@@ -64,15 +72,19 @@ public class Theatre {
                 return false;
             }
         }
-        public boolean cancel () {
-            if(this.reserved){
+
+        public boolean cancel() {
+            if (this.reserved) {
                 this.reserved = false;
                 System.out.println("Reservation of seat: " + seatNumber + " is canceled");
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
+        }
+
+        public double getPrice() {
+            return price;
         }
     }
 }

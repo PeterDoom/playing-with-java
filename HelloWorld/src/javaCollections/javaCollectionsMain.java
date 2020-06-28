@@ -31,7 +31,7 @@ public class javaCollectionsMain {
 
     public static void printList(List<Theatre.Seat> list) {
         for(Theatre.Seat seat : list) {
-            System.out.print(" " + seat.getSeatNumber());
+            System.out.print(" " + seat.getSeatNumber() + " " + seat.getPrice() + " ");
         }
         System.out.println();
         System.out.println("======================================================================");
