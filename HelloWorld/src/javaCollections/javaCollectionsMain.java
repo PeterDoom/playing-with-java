@@ -12,6 +12,7 @@ public class javaCollectionsMain {
         theatre.reserveSeat("A15");
         theatre.reserveSeat("A235");
         List<Theatre.Seat> seatCopy = theatre.getSeats();
+        Collections.shuffle(theatre.getSeats());
         printList(seatCopy);
         sortList(seatCopy);
         printList(seatCopy);
