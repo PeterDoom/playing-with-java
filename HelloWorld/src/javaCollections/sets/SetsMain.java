@@ -1,5 +1,7 @@
 package javaCollections.sets;
 
+import generics.Team;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,6 +15,19 @@ public class SetsMain {
     public static void main(String[] args) {
         HeavenlyBody temp = new HeavenlyBody("Mercury", 88);
         solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+
+        temp = new HeavenlyBody("Venus", 255);
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+
+        temp = new HeavenlyBody("Earth", 365);
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+
+        HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
+        solarSystem.put(temp.getName(), tempMoon);
+        temp.addMoon(tempMoon);
     }
 
 }
