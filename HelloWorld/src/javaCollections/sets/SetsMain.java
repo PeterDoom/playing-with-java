@@ -28,6 +28,10 @@ public class SetsMain {
         HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
         solarSystem.put(temp.getName(), tempMoon);
         temp.addMoon(tempMoon);
+
+//        HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
+//        planets.add(pluto);
     }
+
 
 }
