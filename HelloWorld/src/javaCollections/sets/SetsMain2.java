@@ -14,5 +14,8 @@ public class SetsMain2 {
         }
 
         System.out.println("There are " + sqaures.size() + " squares and " + cubes.size() + " cubes.");
+        Set<Integer> union = new HashSet<>(sqaures);
+        union.addAll(cubes);
+        System.out.println("Union contains " + union.size() + " elements");
     }
 }
