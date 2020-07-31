@@ -17,5 +17,8 @@ public class SetsMain2 {
         Set<Integer> union = new HashSet<>(sqaures);
         union.addAll(cubes);
         System.out.println("Union contains " + union.size() + " elements");
+        Set<Integer> intersection = new HashSet<>(sqaures);
+        intersection.retainAll(cubes);
+        System.out.println("Intersection contains " + intersection.size() + " elements");
     }
 }
