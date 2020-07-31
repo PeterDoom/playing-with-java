@@ -9,7 +9,10 @@ public class SetsMain2 {
         Set<Integer> cubes = new HashSet<>();
 
         for (int i = 1; i <= 100; i++) {
-            sqaures.add(i * i)
+            sqaures.add(i * i);
+            cubes.add(i * i * i);
         }
+
+        System.out.println("There are " + sqaures.size() + " squares and " + cubes.size() + " cubes.");
     }
 }
