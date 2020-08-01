@@ -35,22 +35,36 @@ public class StockItem implements Comparable<StockItem> {
 
     public void adjustStock(int quantity) {
         int newQuantity = this.quantityStock + quantity;
-        if (newQuantity >=0){
+        if (newQuantity >= 0) {
             this.quantityStock = newQuantity;
         }
     }
 
     @Override
-    public boolean equals(Object object){
+    public boolean equals(Object object) {
         System.out.println("Entering StockItem.equals");
-        if(object == this){
+        if (object == this) {
             return true;
         }
-        if ((object == null) || (object.getClass() != this.getClass())){
+        if ((object == null) || (object.getClass() != this.getClass())) {
             return false;
         }
         String objName = ((StockItem) object).getName();
         return this.name.equals(objName);
     }
 
+    @Override
+    public int compareTo(StockItem o) {
+        System.out.println("Entering StockItem.compareTo");
+        if (this == o) {
+            return 0;
+        }
+        if (o != null) {
+            return this.name.compareTo(o.getName());
+        }
+
+        throw new NullPointerException();
+    }
+
+    
 }
