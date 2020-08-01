@@ -24,10 +24,19 @@ public class StockItem implements Comparable<StockItem> {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price > 0.0) {
+            this.price = price;
+        }
     }
 
     public void setQuantityStock(int quantityStock) {
         this.quantityStock = quantityStock;
+    }
+
+    public void adjustStock(int quantity) {
+        int newQuantity = this.quantityStock + quantity;
+        if (newQuantity >=0){
+            this.quantityStock = newQuantity;
+        }
     }
 }
