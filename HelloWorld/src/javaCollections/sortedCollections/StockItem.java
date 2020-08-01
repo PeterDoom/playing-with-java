@@ -12,7 +12,7 @@ public class StockItem implements Comparable<StockItem> {
     }
 
     public StockItem(String name, double price, int quantityStock) {
-        this.name = name;
+        this.name = name;                                                                                                                               
         this.price = price;
         this.quantityStock = quantityStock;
     }
