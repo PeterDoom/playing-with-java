@@ -37,6 +37,7 @@ public class Locations implements Map<Integer, Location> {
 //            }
 //
 //        }
+// Old way of making it        
     }
 
     static {
