@@ -13,11 +13,15 @@ public class Locations implements Map<Integer, Location> {
     public static void main(String[] args) throws IOException {
 
         // newer way of writing try-catch called try-with-resource
-        try (FileWriter locFile = new FileWriter("locations.txt")) {
-            for (Location location : locations.values()) {
+        try (FileWriter locFile = new FileWriter("locations.txt");
+             FileWriter dirFile = new FileWriter("directions.txt")) {
+            for(Location location : locations.values()){
                 locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+                for(String direction : location.getExits().keySet()){
+                    dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n" );
+                }
             }
-        }
+        };
 //        FileWriter locFile = null;
 //        try {
 //            locFile = new FileWriter("locations.txt");
