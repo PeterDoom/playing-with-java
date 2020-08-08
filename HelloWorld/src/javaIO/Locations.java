@@ -1,11 +1,7 @@
 package javaIO;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
 public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
@@ -46,7 +42,25 @@ public class Locations implements Map<Integer, Location> {
     }
 
     static {
-
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(new FileReader("locations.txt"));
+            scanner.useDelimiter(",");
+            while (scanner.hasNextLine()) {
+                int loc = scanner.nextInt();
+                scanner.skip(scanner.delimiter());
+                String description = scanner.nextLine();
+                System.out.println("Imported Loc: " + loc + ": " + description);
+                Map<String, Integer> tempExit = new HashMap<>();
+                locations.put(loc, new Location(loc, description, tempExit));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
 
 
 //        Map<String, Integer> tempExit = new HashMap<String, Integer>();
