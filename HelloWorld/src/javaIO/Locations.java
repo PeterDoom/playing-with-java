@@ -62,7 +62,6 @@ public class Locations implements Map<Integer, Location> {
             }
         }
 
-
 //        Map<String, Integer> tempExit = new HashMap<String, Integer>();
 //        locations.put(0, new Location(0, "You are sitting in front of a computer learning Java", null));
 //
@@ -90,7 +89,7 @@ public class Locations implements Map<Integer, Location> {
 //        tempExit.put("S", 1);
 //        tempExit.put("W", 2);
 //        locations.put(5, new Location(5, "You are in the forest", tempExit));
-//
+
     }
 
     @Override
