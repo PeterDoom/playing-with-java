@@ -78,6 +78,10 @@ public class Locations implements Map<Integer, Location> {
             }
         }catch (IOException e){
             e.printStackTrace();
+        } finally {
+            if (scanner != null)  {
+                scanner.close();
+            }
         }
 
 //        Map<String, Integer> tempExit = new HashMap<String, Integer>();
