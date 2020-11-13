@@ -8,7 +8,7 @@ public class Locations implements Map<Integer, Location> {
 
     public static void main(String[] args) throws IOException {
         try (BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
-             FileWriter dirFile = new FileWriter("directions.txt")) {
+             BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
             for (Location location : locations.values()) {
                 locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
                 for (String direction : location.getExits().keySet()) {
