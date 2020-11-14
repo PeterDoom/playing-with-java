@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ExampleOneMain {
-    private static Locations locations = new Locations();
+    private static LocationsByteStreams locations = new LocationsByteStreams();
 
     public static void main(String[] args) {
 
