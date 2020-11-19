@@ -47,7 +47,7 @@ public class Locations implements Map<Integer, Location> {
                 }
             }
         } catch(IOException io) {
-            System.out.println("IO Exception" + io.getMessage());
+            System.out.println("IO Exception " + io.getMessage());
         } catch(ClassNotFoundException e) {
             System.out.println("ClassNotFoundException " + e.getMessage());
         }
