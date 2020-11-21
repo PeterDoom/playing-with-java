@@ -1,4 +1,4 @@
-package javaRandomAccess.javaIO;
+package javaIO.randomAccessExample;
 
 import java.util.HashMap;
 import java.util.Map;

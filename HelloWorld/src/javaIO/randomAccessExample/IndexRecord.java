@@ -1,4 +1,4 @@
-package javaRandomAccess.javaIO;
+package javaIO.randomAccessExample;
 
 public class IndexRecord {
     private int startByte;
