@@ -8,7 +8,7 @@ public class Locations implements Map<Integer, Location> {
 
     public static void main(String[] args) throws IOException {
         try (ObjectOutputStream locFile = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("locations.dat")))) {
-            for(Location location : locations.values()) {
+            for (Location location : locations.values()) {
                 locFile.writeObject(location);
             }
         }
@@ -17,26 +17,29 @@ public class Locations implements Map<Integer, Location> {
 
     static {
 
-        try(ObjectInputStream locFile = new ObjectInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))) {
+        try (ObjectInputStream locFile = new ObjectInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))) {
             boolean eof = false;
-            while(!eof) {
+            while (!eof) {
                 try {
                     Location location = (Location) locFile.readObject();
                     System.out.println("Read location " + location.getLocationID() + " : " + location.getDescription());
                     System.out.println("Found " + location.getExits().size() + " exits");
 
                     locations.put(location.getLocationID(), location);
-                } catch(EOFException e) {
+                } catch (EOFException e) {
                     eof = true;
                 }
             }
-        } catch(IOException io) {
+        } catch (InvalidClassException io) {
+            System.out.println("Invalid Class Exception " + io.getMessage());
+        } catch (IOException io) {
             System.out.println("IO Exception " + io.getMessage());
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             System.out.println("ClassNotFoundException " + e.getMessage());
         }
 
     }
+
     @Override
     public int size() {
         return locations.size();
