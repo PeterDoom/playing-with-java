@@ -14,5 +14,8 @@ public class ThreadsMain {
                 System.out.println(ANSI_GREEN + "Hello from the anonymous class thread");
             }
         }.start();
+
+        Thread myRunnableThread = new Thread(new MyRunnable());
+        myRunnableThread.start();
     }
 }
