@@ -6,5 +6,11 @@ public class ThreadsMain {
 
         Thread anotherThread = new AnotherThread();
         anotherThread.start();
+
+        new Thread() {
+            public void run() {
+                System.out.println("Hello from the anonymous class thread");
+            }
+        }.start();
     }
 }
