@@ -7,6 +7,7 @@ public class ThreadsMain {
         System.out.println(ANSI_PURPLE + "Hello from the main thread");
 
         Thread anotherThread = new AnotherThread();
+        anotherThread.setName("Another Thread");
         anotherThread.start();
 
         new Thread() {
@@ -16,6 +17,7 @@ public class ThreadsMain {
         }.start();
 
         Thread myRunnableThread = new Thread(new MyRunnable());
+        anotherThread.interrupt();
         myRunnableThread.start();
     }
 }
