@@ -14,7 +14,7 @@ public class ThreadsMain {
             public void run() {
                 System.out.println(ANSI_GREEN + "Hello from the anonymous class thread");
                 try {
-                    anotherThread.join();
+                    anotherThread.join(2000);
                     System.out.println(ANSI_RED + "Another Thread terminated, so I'm running again");
                 } catch (InterruptedException e) {
                     System.out.println(ANSI_RED + "I couldn't wait after all. I was interrupted");
