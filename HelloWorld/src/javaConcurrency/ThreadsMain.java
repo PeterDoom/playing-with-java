@@ -13,11 +13,17 @@ public class ThreadsMain {
         new Thread() {
             public void run() {
                 System.out.println(ANSI_GREEN + "Hello from the anonymous class thread");
+                try {
+                    anotherThread.join();
+                    System.out.println(ANSI_RED + "Another Thread terminated, so I'm running again");
+                } catch (InterruptedException e) {
+                    System.out.println(ANSI_RED + "I couldn't wait after all. I was interrupted");
+                }
             }
         }.start();
 
         Thread myRunnableThread = new Thread(new MyRunnable());
-        anotherThread.interrupt();
+//        anotherThread.interrupt();
         myRunnableThread.start();
     }
 }
