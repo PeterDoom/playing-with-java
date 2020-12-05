@@ -2,6 +2,9 @@ package javaConcurrency.countdown;
 
 public class CountdownMain {
     public static void main(String[] args) {
+
+        //To observe thread interference comment out countdown2 and pass countdown to t2
+
         Countdown countdown = new Countdown();
         Countdown countdown2 = new Countdown();
 
