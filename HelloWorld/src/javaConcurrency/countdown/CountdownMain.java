@@ -10,7 +10,7 @@ public class CountdownMain {
 
         CountdownThread t1 = new CountdownThread(countdown);
         t1.setName("Thread 1");
-        CountdownThread t2 = new CountdownThread(countdown2);
+        CountdownThread t2 = new CountdownThread(countdown);
         t2.setName("Thread 2");
 
         t1.start();
@@ -22,7 +22,8 @@ class Countdown {
 
     private int i;
 
-    public void doCountdown() {
+    //remove synchronized to observe the thread interference
+    public synchronized void doCountdown() {
         String color;
         switch (Thread.currentThread().getName()) {
             case "Thread 1":
