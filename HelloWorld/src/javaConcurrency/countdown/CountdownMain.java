@@ -3,10 +3,11 @@ package javaConcurrency.countdown;
 public class CountdownMain {
     public static void main(String[] args) {
         Countdown countdown = new Countdown();
+        Countdown countdown2 = new Countdown();
 
         CountdownThread t1 = new CountdownThread(countdown);
         t1.setName("Thread 1");
-        CountdownThread t2 = new CountdownThread(countdown);
+        CountdownThread t2 = new CountdownThread(countdown2);
         t2.setName("Thread 2");
 
         t1.start();
