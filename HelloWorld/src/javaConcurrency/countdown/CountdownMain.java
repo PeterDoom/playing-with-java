@@ -22,8 +22,7 @@ class Countdown {
 
     private int i;
 
-    //remove synchronized to observe the thread interference
-    public synchronized void doCountdown() {
+    public void doCountdown() {
         String color;
         switch (Thread.currentThread().getName()) {
             case "Thread 1":
@@ -36,8 +35,11 @@ class Countdown {
                 color = ThreadColor.ANSI_GREEN;
         }
 
-        for (i = 10; i > 0; i--) {
-            System.out.println(color + Thread.currentThread().getName() + ": i=" + i);
+        //remove synchronized to observe the thread interference
+        synchronized (this) {
+            for (i = 10; i > 0; i--) {
+                System.out.println(color + Thread.currentThread().getName() + ": i=" + i);
+            }
         }
     }
 }
