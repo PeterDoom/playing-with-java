@@ -8,7 +8,7 @@ public class Main {
         List<String> buffer = new ArrayList<String>();
         MyProducer producer1 = new MyProducer(buffer, ThreadColor.ANSI_BLUE);
         MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_GREEN);
-        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_CYAN);
+        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_RED);
 
         new Thread(producer1).start();
         new Thread(consumer1).start();

@@ -21,7 +21,7 @@ public class MyConsumer implements Runnable {
                     System.out.println(color + "Exiting");
                     break;
                 } else {
-                    System.out.println(color + " Removed" + buffer.remove(0));
+                    System.out.println(color + "Removed " + buffer.remove(0));
                 }
             }
         }
