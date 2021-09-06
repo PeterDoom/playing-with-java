@@ -8,14 +8,14 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> buffer = new ArrayList<String>();
+        ArrayBlockingQueue<String> buffer = new ArrayBlockingQueue<String>(6);
         ReentrantLock bufferLock = new ReentrantLock();
 
         ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-        MyProducer producer = new MyProducer(buffer, ThreadColor.ANSI_BLUE, bufferLock);
-        MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_GREEN, bufferLock);
-        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_RED, bufferLock);
+        MyProducer producer = new MyProducer(buffer, ThreadColor.ANSI_BLUE);
+        MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_GREEN);
+        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_RED );
 
         executorService.execute(producer);
         executorService.execute(consumer1);
