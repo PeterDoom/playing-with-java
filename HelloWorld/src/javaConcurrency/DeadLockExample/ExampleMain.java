@@ -2,9 +2,26 @@ package javaConcurrency.DeadLockExample;
 
 public class ExampleMain {
     public static void main(String[] args) {
+        PolitePerson jane = new PolitePerson("Jane");
+        PolitePerson john = new PolitePerson("John");
     }
 
     static class PolitePerson{
         private final String name;
+
+        PolitePerson(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return name;
+        }
+
+        public synchronized void sayHello(PolitePerson person) {
+            System.out.format("%s: %s" + " has said hello to me!%n", this.name, person.getName());
+        }
+
+        public synchronized void sayHelloBack(PolitePerson person) {
+            System.out.format("%s: %s" + " has said hello back to me!%n", this.name, person.getName());
+        }
     }
 }
