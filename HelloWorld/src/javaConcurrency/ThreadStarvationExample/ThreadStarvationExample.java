@@ -2,8 +2,10 @@ package javaConcurrency.ThreadStarvationExample;
 
 import javaConcurrency.ProducerConsumer.ThreadColor;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class ThreadStarvationExample {
-    private static Object lock = new Object();
+    private static ReentrantLock lock = new ReentrantLock(true);
 
     public static void main(String[] args) {
         Thread t1 = new Thread(new Worker(ThreadColor.ANSI_RED), "Priority 10");
