@@ -17,6 +17,8 @@ public class Worker {
         return active;
     }
 
-    public synchronized void work(SharedRe)
+    public synchronized void work(SharedResource sharedResource) {
+
+    }
 
 }
