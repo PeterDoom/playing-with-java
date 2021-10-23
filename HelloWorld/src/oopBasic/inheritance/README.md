@@ -8,4 +8,4 @@ An example would be Mammals. There are different type of Mammals but in order fo
 
 ## Inheritance in Code:
 You can see in the code that we have one class called AnimalInheritance. We can see that we've defined some very abstract but common methods and variables and so on. 
-Now as per each individual implementation, in the InheritanceMain file we can see that 
+Now as per each individual implementation, in the InheritanceMain file we can see that we have created two other animals both deriving from the base Animal class. Now a dog and a fish are definitely different but they both behave in some aspects similarly. 
